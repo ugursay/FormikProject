@@ -1,0 +1,146 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+form {
+  width: 500px;
+}
+
+form label {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.inputDiv {
+  margin-bottom: 10px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 8px 7px;
+  font-size: 16px;
+  border: 2px solid #4a5568;
+  background-color: #2d3748;
+  color: white;
+  margin: 5px 0px;
+  outline: none;
+  border-radius: 10px;
+}
+
+.input-error {
+  border-color: red;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  text-align: left;
+}
+
+input::placeholder {
+  color: lightgray;
+}
+
+input:focus {
+  border-color: lightblue;
+}
+
+button {
+  width: 100%;
+  padding: 8px 8px;
+  margin: 16px 0px;
+  background-color: #4a5568;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 20px;
+  border: none;
+}
+
+.checkbox {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.checkbox input {
+  width: auto;
+}
+
+.formLink {
+  color: white;
+}
+
+.formLinkDisplay {
+  color: white;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.toast {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #4caf50;
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  font-size: 16px;
+  z-index: 9999; /* Mesajın diğer öğelerin üzerinde görünmesini sağlar */
+  opacity: 1;
+  transition: opacity 0.3s ease-out;
+}
+
+.dataDisplayMain {
+  border: 2px solid #2d3748;
+  border-radius: 20px;
+  padding: 30px;
+}
+
+.dataHead {
+  text-align: center;
+}
+
+.datas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  place-items: center;
+}
+
+.data {
+  width: 280px;
+  height: 180px;
+  background-color: rgba(240, 248, 255, 0.432);
+  opacity: 0.5;
+  color: #111214;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 30px;
+}
+
+.data hr {
+  margin-top: 10px; /* hr etiketinin üst kısmına boşluk ekledim */
+}
+
+.dataDisplayLink {
+  text-align: center;
+}
