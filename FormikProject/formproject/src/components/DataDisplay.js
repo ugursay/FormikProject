@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import Toast from "./Toast";
 
 const DataDisplay = () => {
   const [users, setUsers] = useState([]); // Kullanıcıları tutacak state
   const [loading, setLoading] = useState(true); // Yükleniyor durumu
+
+  const [message, setMessage] = useState("");
+  const [showToast, setShowToast] = useState(false);
 
   useEffect(() => {
     const fetchUsers = async () => {
@@ -25,11 +29,19 @@ const DataDisplay = () => {
 
   const deleteUser = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/users/${id}`);
-      console.log("kullanıcı silindi", id);
-      setUsers(users.filter((user) => user.id !== id));
+      setTimeout(async () => {
+        await axios.delete(`http://localhost:5000/users/${id}`);
+        setMessage("Veriler Silindi");
+        setShowToast(true);
+        console.log("kullanıcı silindi", id);
+        setUsers(users.filter((user) => user.id !== id));
+      }, 700);
     } catch (error) {
-      console.error("silme işlemi başarısız oldu", error);
+      setTimeout(() => {
+        console.error("silme işlemi başarısız oldu", error);
+        setMessage("Veriler Silinemedi");
+        setShowToast(true);
+      }, 700);
     }
   };
 
@@ -71,6 +83,10 @@ const DataDisplay = () => {
             Ana forma Git
           </Link>
         </div>
+
+        {showToast && (
+          <Toast message={message} onClose={() => setShowToast(false)} />
+        )}
       </div>
     </>
   );

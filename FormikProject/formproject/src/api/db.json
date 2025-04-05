@@ -3,7 +3,7 @@
     {
       "id": "6fa7",
       "email": "ugursay3211@gmail.com",
-      "age": "20",
+      "age": "23",
       "password": "12345Nn",
       "confirmPassword": "12345Nn"
     },
@@ -29,20 +29,6 @@
       "confirmPassword": "12345Bb"
     },
     {
-      "id": "c2d6",
-      "email": "ugursay3211@gmail.com",
-      "age": "25",
-      "password": "12345Bb",
-      "confirmPassword": "12345Bb"
-    },
-    {
-      "id": "c2n6",
-      "email": "ugursay3211@gmail.com",
-      "age": "25",
-      "password": "12345Bb",
-      "confirmPassword": "12345Bb"
-    },
-    {
       "id": "c2b8",
       "email": "ugursay3211@gmail.com",
       "age": "25",
@@ -50,18 +36,18 @@
       "confirmPassword": "12345Bb"
     },
     {
-      "id": "c2b44",
+      "id": "5af8",
       "email": "ugursay3211@gmail.com",
-      "age": "25",
-      "password": "12345Bb",
-      "confirmPassword": "12345Bb"
+      "age": "15",
+      "password": "123456Nm",
+      "confirmPassword": "123456Nm"
     },
     {
-      "id": "c2b48",
+      "id": "5af4",
       "email": "ugursay3211@gmail.com",
-      "age": "30",
-      "password": "12345Bb",
-      "confirmPassword": "12345Bb"
+      "age": "15",
+      "password": "123456Nm",
+      "confirmPassword": "123456Nm"
     }
   ]
 }

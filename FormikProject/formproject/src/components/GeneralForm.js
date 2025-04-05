@@ -28,17 +28,24 @@ function GeneralForm() {
     }
   };
 
-  const { values, errors, isSubmitting, handleChange, handleSubmit } =
-    useFormik({
-      initialValues: {
-        email: "",
-        age: "",
-        password: "",
-        confirmPassword: "",
-      },
-      validationSchema: basicSchema,
-      onSubmit,
-    });
+  const {
+    values,
+    errors,
+    isSubmitting,
+    handleChange,
+    handleSubmit,
+    handleBlur,
+    touched,
+  } = useFormik({
+    initialValues: {
+      email: "",
+      age: "",
+      password: "",
+      confirmPassword: "",
+    },
+    validationSchema: basicSchema,
+    onSubmit,
+  });
   //   console.log(formik);
   return (
     <form onSubmit={handleSubmit}>
@@ -48,11 +55,14 @@ function GeneralForm() {
           type="email"
           value={values.email}
           onChange={handleChange}
+          onBlur={handleBlur}
           id="email"
           placeholder="Mail adresinizi giriniz"
-          className={errors.email ? "input-error" : ""}
+          className={errors.email && touched.email ? "input-error" : ""}
         />
-        {errors.email && <p className="error">{errors.email}</p>}
+        {errors.email && touched.email && (
+          <div className="error">{errors.email}</div>
+        )}
       </div>
       <div className="inputDiv">
         <label>Yaş</label>
@@ -60,10 +70,12 @@ function GeneralForm() {
           type="number"
           value={values.age}
           onChange={handleChange}
+          onBlur={handleBlur}
           id="age"
           placeholder="Yaşınızı giriniz giriniz"
+          className={errors.age && touched.age ? "input-error" : ""}
         />
-        {errors.age && <p className="error">{errors.age}</p>}
+        {errors.age && touched.age && <div className="error">{errors.age}</div>}
       </div>
       <div className="inputDiv">
         <label>Şifre</label>
@@ -71,10 +83,14 @@ function GeneralForm() {
           type="password"
           value={values.password}
           onChange={handleChange}
+          onBlur={handleBlur}
           id="password"
           placeholder="Şifrenizi giriniz"
+          className={errors.password && touched.password ? "input-error" : ""}
         />
-        {errors.password && <p className="error">{errors.password}</p>}
+        {errors.password && touched.password && (
+          <div className="error">{errors.password}</div>
+        )}
       </div>
       <div className="inputDiv">
         <label>Şifre Tekrar</label>
@@ -82,11 +98,17 @@ function GeneralForm() {
           type="password"
           value={values.confirmPassword}
           onChange={handleChange}
+          onBlur={handleBlur}
           id="confirmPassword"
           placeholder="Şifrenizi tekrar giriniz"
+          className={
+            errors.confirmPassword && touched.confirmPassword
+              ? "input-error"
+              : ""
+          }
         />
-        {errors.confirmPassword && (
-          <p className="error">{errors.confirmPassword}</p>
+        {errors.confirmPassword && touched.confirmPassword && (
+          <div className="error">{errors.confirmPassword}</div>
         )}
       </div>
       <button disabled={isSubmitting} type="submit">

@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  margin: 0;
+  /* margin: 0; */
   padding: 0;
 }
 
@@ -8,15 +8,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  /* height: 100vh;  */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 form {
-  width: 500px;
+  width: 600px;
 }
 
 form label {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: bold;
 }
 
@@ -28,7 +31,7 @@ input,
 select {
   width: 100%;
   padding: 8px 7px;
-  font-size: 16px;
+  font-size: 20px;
   border: 2px solid #4a5568;
   background-color: #2d3748;
   color: white;
@@ -43,7 +46,7 @@ select {
 
 .error {
   color: red;
-  font-size: 12px;
+  font-size: 14px;
   text-align: left;
 }
 
@@ -61,7 +64,7 @@ button {
   margin: 16px 0px;
   background-color: #4a5568;
   color: white;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: bold;
   cursor: pointer;
   border-radius: 20px;
@@ -80,6 +83,7 @@ button {
 
 .formLink {
   color: white;
+  font-size: 18px;
 }
 
 .formLinkDisplay {
@@ -114,6 +118,7 @@ button {
 
 .dataHead {
   text-align: center;
+  font-size: 24px;
 }
 
 .datas {
@@ -128,19 +133,29 @@ button {
 
 .data {
   width: 280px;
-  height: 180px;
+  height: 200px;
+  font-size: 18px;
   background-color: rgba(240, 248, 255, 0.432);
   opacity: 0.5;
   color: #111214;
   border-radius: 10px;
   padding: 10px;
   margin: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hafif gölge ekledim */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.data:hover {
+  transform: translateY(-10px); /* Hover ile yukarı kayma efekti */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Hoverda daha belirgin gölge */
 }
 
 .data hr {
-  margin-top: 10px; /* hr etiketinin üst kısmına boşluk ekledim */
+  margin-top: 15px;
+  border: 1px solid #e2e8f0;
 }
 
 .dataDisplayLink {
   text-align: center;
+  margin-top: 30px;
 }
