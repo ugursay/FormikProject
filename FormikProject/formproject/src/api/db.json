@@ -36,18 +36,18 @@
       "confirmPassword": "12345Bb"
     },
     {
-      "id": "5af8",
+      "id": "5af4",
       "email": "ugursay3211@gmail.com",
       "age": "15",
       "password": "123456Nm",
       "confirmPassword": "123456Nm"
     },
     {
-      "id": "5af4",
-      "email": "ugursay3211@gmail.com",
-      "age": "15",
-      "password": "123456Nm",
-      "confirmPassword": "123456Nm"
+      "id": "94f2",
+      "email": "ugur@gmail.com",
+      "age": "20",
+      "password": "sifre123T",
+      "confirmPassword": "sifre123T"
     }
   ]
 }
